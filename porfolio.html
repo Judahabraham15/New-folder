@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Judah's Website</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #081b29;
+    color:white;
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:20px 10px ;
+    background-color: transparent;
+    justify-content: space-between;
+    display: flex;
+    align-items:center ;
+    z-index:100;
+}
+.logo{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    
+
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+@keyframes showRight{
+    100%{
+        width:0;
+    }
+}
+.navbar a{
+    font-size: 20px;
+    color: white;
+    text-decoration:none ;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.navbar a:hover,.navbar a.active{
+    color: #FFD700;
+}
+.home{
+    display:flex;
+    align-items: center;
+    height: 100vh;
+    padding:0 10%;
+    
+}
+.home-content{
+    max-width: 600px;
+    
+}
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.9s;
+}
+.home-content h3{
+     font-size:35px ;
+     font-weight: 700;
+     color: gold;
+     position: relative;
+   }
+   .home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+}
+   .home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+   }
+   .home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.8s;
+}
+   .home-content .button-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height:50px ;
+   }
+   .home-content .button-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.9s;
+    z-index: 2;
+}
+   .home-img{
+    background-image: url(pics.jpg);
+    width: 450px;
+    height:450px;
+    background-size: cover;
+    animation: shape 5s linear infinite;
+   }
+   @keyframes shape{
+    0%, 100%{
+        border-radius: 40% 60% 70% 30% / 40% 40%  60% 50% ; 
+    }
+    33%{
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70% ;
+    }
+    66%{
+        border-radius:100% 60% 60% 100% /100% 100% 60% 60% ;
+    }
+   }
+   .button-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color:#081b29;
+    text-decoration: none;
+    font-weight:600 ;
+    letter-spacing: 1px;
+    width: 150px;
+    background: #FFD700;
+    border: 2px solid gold;
+    border-radius: 10px;
+    height: 100%;
+    z-index: 1;
+    overflow:hidden ;
+    transition: 0.5s;
+   }
+   .button-box a:hover{
+    color: #FFD700;
+
+   }
+   .button-box a:nth-child(2){
+    background: transparent;
+    color: gold;
+   }
+   .button-box a:nth-child(2)::before{
+    background-color: #FFD700;
+   }
+   .button-box a:nth-child(2):hover{
+    color:#081b29;
+   }
+   .button-box a::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0 ;
+    height: 100%;
+    background:#081b29;
+    z-index: -1;
+    transition: 0.5s;
+
+   }
+   .button-box a:hover::before{
+    width: 100%;
+   }
+   .home-socials{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    justify-content: space-between;
+   } 
+   .home-socials::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+   .home-socials a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid gold;
+    font-size: 20px;
+    color: gold;
+    text-decoration: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   .home-socials a:hover{
+    color: #081b29;
+   }
+   .home-socials a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0 ;
+    height: 100%;
+    background: gold;
+    z-index: -1;
+    transition: 0.5s;
+    
+   }
+   .home-socials a:hover:before{
+    width: 100%;
+    
+   }
+   .home-imgHover{
+    position: absolute;
+    top:0;
+    right:290px;
+    width:500px ;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover 0.1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+   }
+   @keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+   }
+   .home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0 ;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 2;
+}
+   .home-imgHover:hover{    
+    background: #081b29;
+    opacity: 0.8;
+    
+   }
+   
+</style> -->
+  <body>
+    <header class="header">
+      <a href="a" class="logo">Judah.</a>
+      <br />
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h1>Hello, I'm Judah Abraham</h1>
+        <h3>I am an Aspiring FullStack Developer</h3>
+        <p>
+          I'm a student who loves coding and I love thinking outside the box
+        </p>
+        <div class="button-box">
+          <a href="a">Let's Interact</a>
+          <a href="a">Hire Me</a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img class="home-img" src="pics.jpg" />
+      </div>
+      <div class="home-socials">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+      </div>
+      <span class="home-imgHover"></span>
+    </section>
+  </body>
+</html>

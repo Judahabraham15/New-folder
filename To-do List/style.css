@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg,#081b29,coral) ;
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width:540px ;
+    background: #081b29;
+    margin:100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color:coral;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+      width:30px;
+      margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:35px;
+    padding-left:20px;
+    background: #edeef0;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:#ff5945;
+    color: white;
+    font-size:16px ;
+    cursor: pointer;
+    border-radius: 45px;
+
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px ;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color:coral;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height:28px;
+    border-radius: 50%;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top:5px;
+    left:8px;
+
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("checked.jpg");
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color:#555;
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background: #555;
+}
+@media (max-width: 600px) { 
+    .container {
+     padding: 10px; }
+     li {
+         flex-direction: column; 
+         align-items: flex-start; 
+        } 
+        button {
+             margin-top: 10px;
+             width: 100%; 
+            }
+             } 
+             /* Media query for devices with a max width of 400px */
+ @media (max-width: 400px) { 
+    h1 { 
+        font-size: 1.5em; 
+    } 
+    li { 
+        padding: 5px; 
+    } 
+    button {
+         padding: 10px;
+         margin-top:-1px;
+         
+         } }
+         /* Media query for Surface Duo */
+          @media (max-width: 599px) { 
+            .container { 
+                padding: 10px; 
+            }
+             li { 
+                flex-direction: column;
+                 align-items: flex-start;
+                 } 
+                 button {
+                     margin-top: 0px; 
+                     width: 100%;
+                     padding: 10px; 
+                     } 
+                     h1 { 
+                        font-size: 1.5em;
+                     } 
+                     li { 
+                        padding: 5px; 
+                    }
+                     button { 
+                        padding: 10px; 
+                    } }

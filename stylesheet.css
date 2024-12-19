@@ -14,7 +14,7 @@ body {
   /* top: 0;
   left: 0;
   width: 100%; */
-  padding: 20px 10px;
+  padding: 20px 10px; 
   background-color: transparent;
   /* justify-content: space-between; */
   display: flex;
@@ -149,7 +149,6 @@ body {
   height: 100vh;
   padding: 0 10%;
 }
-
 .home-img {
   background-image: url(pics.jpg);
   width: 400px;
@@ -217,7 +216,7 @@ body {
 }
 .home-socials {
   position: absolute;
-  bottom: -50px;
+  bottom: -100px;
   width: 170px;
   justify-content: space-between;
 }
@@ -288,14 +287,46 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  
   width: 120%;
   background: #081b29;
   animation: showRight 1s ease forwards;
   animation-delay: 3s;
   z-index: 100;
 }
-.home-imgHover:hover {
+/*.home-imgHover:hover {
   background: #081b29;
   opacity: 0.8;
+}*/
+/* For devices with a width of 600px or less */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .home {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* For devices with a width between 601px and 1024px */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .home {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+/* For devices with a width of 1025px or more */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+  .home {
+    width: 70%;
+    padding: 30px;
+  }
 }
